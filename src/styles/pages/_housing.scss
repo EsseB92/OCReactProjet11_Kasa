@@ -1,0 +1,63 @@
+.carousel {
+    width: 100%;
+    height: 415px;
+    margin: 0 auto;
+}
+
+.content {
+        color: $color-primary;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .info {
+            h1 {
+                display: block;
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+    
+            p {
+                margin-bottom: 20px;
+            }
+    
+            .tags {
+                display: flex;
+                gap: 10px
+            }
+        }
+
+        .host-and-rating {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .host {
+                display: flex;
+                gap: 10px;
+    
+                &__name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                }
+    
+                &__image {
+                    border-radius: 30px;
+                    height: 64px;
+                    width: 64px;
+                }
+            }
+        }
+}
+.dropdowns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 80px;
+
+    .dropdown {
+        width: 50%;
+    }
+}

@@ -1,0 +1,33 @@
+.error404 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    color: $color-primary;
+    
+
+    h2 {
+        color: $color-primary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 288px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+
+    }
+
+    a {
+        text-decoration: underline;
+        color: $color-primary;
+    }
+}
+

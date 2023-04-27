@@ -1,0 +1,15 @@
+.housings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+
+    &::after {
+        content: "";
+        flex-basis: 340px;
+        flex-grow: 1;
+    }
+}
