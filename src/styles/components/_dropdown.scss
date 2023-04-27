@@ -1,0 +1,53 @@
+.dropdown {
+    margin-bottom: 20px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        background-color: $color-primary;
+        border-radius: 5px;
+        padding: 15px 25px;
+        height: 50px;
+        width: 100%;
+        color: $color-white;
+        cursor: pointer;
+
+        h2 {
+            pointer-events: none;
+            font-size: 24px;
+        }
+    
+        img {
+            pointer-events: none;
+        }
+    }
+
+    &__content {
+        background-color: $color-lightgray;
+        color: $color-primary;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 0 18px;
+        margin-top: -5px;
+        max-height: 0;
+        
+        transition: max-height .25s ease-out,padding .3s ease-out;
+
+        &--collapsed {
+            max-height: 500px;
+            padding: 23px 18px 18px 18px;
+            transition: max-height .25s ease-in-out,padding .3s ease-in-out;
+        }
+        
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+}
+

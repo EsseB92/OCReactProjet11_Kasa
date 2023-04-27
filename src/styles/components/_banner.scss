@@ -1,0 +1,31 @@
+.banner {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: $color-black;
+    
+    &__image {
+        height: 220px;
+        min-width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+        opacity: 0.7;
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: $color-white;
+        font-size: 48px;
+        line-height: 142.6%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
