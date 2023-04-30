@@ -6,25 +6,26 @@ import Card from '../components/Card';
 
 const Home = () => {
     return (
-        <Fragment>
+        <>
             <Banner
                 image={bannerImage}
                 alt="Bannière de la page d'accueil"
                 text="Chez vous, partout et ailleurs"
+                size="small"
             />
             <section className="housings">
                 {housingsData.map((housing) => {
                     return (
                         <Card
                             key={housing.id}
-                            link={'/housing/' + housing.id}
+                            link={`/housing/${housing.id}`}
                             image={housing.cover}
                             title={housing.title}
                         />
                     );
                 })}
             </section>
-        </Fragment>
+        </>
     );
 };
 
