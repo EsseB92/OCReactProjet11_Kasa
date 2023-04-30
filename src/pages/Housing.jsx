@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Carousel from '../components/Carousel';
 import Dropdown from '../components/Dropdown';
 import housingsData from '../data/housing.json';
@@ -7,7 +7,21 @@ import Tag from '../components/Tag';
 import Rating from '../components/Rating';
 
 const Housing = () => {
-    let title,
+    const { housingId } = useParams();
+
+    // useMemo permet de trouver le logement qui correspond à "housingId" et de stocker le résultat dans la constante "housing"
+    const housing = React.useMemo(() => {
+        return housingsData.find((h) => h.id === housingId);
+    }, [housingId]);
+
+    console.log(!housing);
+
+    if (!housing) {
+        return <Navigate to="/error404" />;
+    }
+
+    const {
+        title,
         pictures,
         description,
         host,
@@ -15,39 +29,12 @@ const Housing = () => {
         location,
         equipments,
         tags,
-        firstname,
-        lastname;
+    } = housing;
+    const [firstname, lastname] = host.name.split` `;
 
-    let { housingId } = useParams();
-
-    const containerStyles = {
-        width: '100%',
-        height: '415px',
-        margin: '0 auto',
-    };
-
-    housingsData.map((housing) => {
-        if (housing.id === housingId) {
-            title = housing.title;
-            pictures = housing.pictures;
-            description = housing.description;
-            host = housing.host;
-            rating = housing.rating;
-            location = housing.location;
-            equipments = housing.equipments;
-            tags = housing.tags;
-            return true;
-        } else {
-            return false;
-        }
-    });
-
-    [firstname, lastname] = host.name.split` `;
-
-    //const slides = [{ url }];
     return (
-        <Fragment>
-            <section className="carousel" style={containerStyles}>
+        <>
+            <section className="carousel">
                 <Carousel key="housingId" pictures={pictures} />
             </section>
             <section className="content">
@@ -89,7 +76,7 @@ const Housing = () => {
                     desc={equipments}
                 />
             </section>
-        </Fragment>
+        </>
     );
 };
 
