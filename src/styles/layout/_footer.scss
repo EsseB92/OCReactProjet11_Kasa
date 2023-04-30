@@ -6,4 +6,23 @@
     height: 209px;
     background-color: $color-black;
     color: $color-white;
+    margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    img {
+        width: 122px;
+    }
+
+    p {
+        font-size: $font-size-large;
+        
+        @media screen and (max-width: 768px) {
+            font-size: $font-size-xxx-small;
+            text-align: center;
+        }
+    }
 }

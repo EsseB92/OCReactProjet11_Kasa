@@ -1,0 +1,77 @@
+.carousel {
+    &__container {
+        height: 100%;
+        position: relative;
+        color: $color-white;
+    }
+
+    &__prev {
+        width: 46.68px;
+        height: 79.2px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 25px;
+        z-index: 1;
+        cursor: pointer;
+
+        @media screen and (max-width: 992px) {
+            width: 23.34px;
+            height: 39.6px;
+            left: 18px;
+        }
+        @media screen and (max-width: 768px) {
+            width: 11.67px;
+            height: 19.8px;
+            left: 10px;
+        }
+    }
+
+    &__next {
+        width: 46.68px;
+        height: 79.2px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 25px;
+        z-index: 1;
+        cursor: pointer;
+
+        @media screen and (max-width: 992px) {
+            width: 23.34px;
+            height: 39.6px;
+            right: 18px;
+        }
+        @media screen and (max-width: 768px) {
+            width: 11.67px;
+            height: 19.8px;
+            right: 10px;
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 18px;
+        z-index: 1;
+
+        @media screen and (max-width: 768px) {
+            font-size: $font-size-x-small;
+            bottom: 10px;
+        }
+    }
+
+    &__slide {
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius-large;
+        background-position: center;
+        background-size: cover;
+
+        @media screen and (max-width: 768px) {
+            border-radius: $border-radius-small;
+        }
+    }
+
+}

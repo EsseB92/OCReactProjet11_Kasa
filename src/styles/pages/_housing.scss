@@ -2,6 +2,13 @@
     width: 100%;
     height: 415px;
     margin: 0 auto;
+
+    @media screen and (max-width: 992px) {
+        height: 320px;
+    }
+    @media screen and (max-width: 768px) {
+        height: 255px;
+    }
 }
 
 .content {
@@ -10,19 +17,34 @@
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .info {
             h1 {
                 display: block;
-                font-size: 36px;
+                font-size: $font-size-x-large;
                 margin-bottom: 10px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: $font-size-small;
+                    margin-bottom: 5px;
+                }
             }
     
             p {
                 margin-bottom: 20px;
+                @media screen and (max-width: 768px) {
+                    font-size: $font-size-x-small;
+                    margin-bottom: 10px;
+                }
             }
     
             .tags {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 10px
             }
         }
@@ -31,6 +53,15 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            justify-content: space-evenly;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: row-reverse;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                align-tracks: center;
+            }
 
             .host {
                 display: flex;
@@ -41,12 +72,21 @@
                     flex-direction: column;
                     align-items: flex-end;
                     justify-content: center;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font-size-xxx-small;
+                    }
                 }
     
                 &__image {
-                    border-radius: 30px;
+                    border-radius: $border-radius-rond;
                     height: 64px;
                     width: 64px;
+
+                    @media screen and (max-width: 768px) {
+                        height: 32px;
+                        width: 32px;
+                    }
                 }
             }
         }
@@ -55,9 +95,32 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    column-gap: 80px;
+    gap: 80px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 
     .dropdown {
         width: 50%;
+
+        @media screen and (max-width: 768px) {
+            width: auto;
+        }
+        
+        &__header h2 {
+            font-size: $font-size-small;
+            @media screen and (max-width: 768px) {
+                font-size: $font-size-xxx-small;
+            }
+        }
+
+        &__content p {
+            font-size: $font-size-small;
+            @media screen and (max-width: 768px) {
+                font-size: $font-size-xxx-small;
+            }
+        }
     }
 }

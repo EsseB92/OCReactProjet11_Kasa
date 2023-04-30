@@ -1,4 +1,18 @@
 .rating {
     display: flex;
     gap: 15px;
+
+    @media screen and (max-width: 768px) {
+        gap: 6px;
+    }
+
+    img {
+        width: 24.75px;
+        height: 24px;
+
+        @media screen and (max-width: 768px) {
+            width: 13.41px;
+            height: 13px;
+        }
+    }
 }

@@ -3,9 +3,17 @@
     align-items: center;
     justify-content: center;
     background-color: $color-primary;
-    border-radius: 10px;
-    width: 115px;
+    border-radius: $border-radius-small;
+    width: auto;
     height: 25px;
-    font-size: 14px;
+    font-size: $font-size-x-small;
     color: $color-white;
+    padding: 0 20px;
+
+    @media screen and (max-width: 768px) {
+        height: 18px;
+        font-size: $font-size-xxxx-small;
+        border-radius: $border-radius-x-small;
+        padding: 0 10px;
+    }
 }
