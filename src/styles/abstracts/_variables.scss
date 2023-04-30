@@ -1,11 +1,34 @@
-$font-family: 'Montserrat', sans-serif!default;
-$font-style: normal!default;
-$font-weight: 500!default;
-$font-size: 18px!default;
-$line-height: 142,6%!default;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Color */
 $color-primary: #FF6060;
 $color-gray: #C4C4C4;
 $color-lightgray: #f7f7f7;
 $color-white: #FFFFFF;
 $color-black: #000000;
+
+/* Font */
+$font-family: 'Montserrat', sans-serif;
+$font-style: normal;
+$line-height: 142.6%;
+// Weight
+$font-weight-small: 400;
+$font-weight-medium: 500;
+$font-weight-large: 700;
+//Size
+$font-size-xxxx-small: 10px;
+$font-size-xxx-small: 12px;
+$font-size-xx-small: 13px;
+$font-size-x-small: 14px;
+$font-size-small: 18px;
+$font-size-large: 24px;
+$font-size-x-large: 36px;
+$font-size-xx-large: 48px;
+$font-size-xxx-large: 96px;
+$font-size-xxxx-large: 288px;
+
+/* Border radius */
+$border-radius-rond: 50%;
+$border-radius-large: 25px;
+$border-radius-small: 10px;
+$border-radius-x-small: 5px;
