@@ -1,7 +1,7 @@
-body {
-    font-family: $font-family;
+*, html, body {
+    font-family: $font-family!important;
     font-style: $font-style;
-    font-weight: $font-weight;
-    font-size: $font-size;
-    line-height: $line-height;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-small;
+    line-height: $line-height!important;
 }
