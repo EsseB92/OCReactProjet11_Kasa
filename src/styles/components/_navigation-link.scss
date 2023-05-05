@@ -1,0 +1,18 @@
+.nav__link {
+    text-decoration: none;
+    color: $color-primary;
+    font-size: $font-size-large;
+
+    @media screen and (max-width: 768px) {
+        font-size: $font-size-xxx-small;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--active {
+        text-decoration: underline;
+    }
+}

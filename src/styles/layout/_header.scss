@@ -34,45 +34,4 @@
             }
         }
     }
-
-    
-}
-
-.nav {
-    ul {
-        display: flex;
-        list-style: none;
-        gap: 40px;
-
-        @media screen and (max-width: 768px) {
-            gap: 0 20px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: baseline;
-        }
-    }
-
-    li {
-        cursor: pointer;
-    
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $color-primary;
-        font-size: $font-size-large;
-
-        @media screen and (max-width: 768px) {
-            font-size: $font-size-xxx-small;
-            text-transform: uppercase;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &--active {
-            text-decoration: underline;
-        }
-    }
 }
