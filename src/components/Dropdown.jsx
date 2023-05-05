@@ -12,22 +12,6 @@ const Dropdown = ({ title, desc }) => {
     const arrowImg = collapsed ? upArrow : downArrow;
     const dropdownContent = collapsed ? 'dropdown__content--collapsed' : '';
 
-    // const isCollapse = (e) => {
-    //     e.preventDefault();
-    //     const dropdown_header = e.target;
-    //     const dropdown_content = dropdown_header.nextSibling;
-    //     const img = dropdown_header.lastChild;
-
-    //     if (
-    //         !dropdown_content.classList.contains('dropdown__content--collapsed')
-    //     ) {
-    //         dropdown_content.classList.add('dropdown__content--collapsed');
-    //         img.src = upArrow;
-    //     } else {
-    //         dropdown_content.classList.remove('dropdown__content--collapsed');
-    //         img.src = downArrow;
-    //     }
-    // };
     return (
         <div className="dropdown">
             <div onClick={toggleCollapse} className="dropdown__header">
