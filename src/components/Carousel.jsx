@@ -3,10 +3,13 @@ import leftArrow from '../assets/leftArrow.png';
 import rightArrow from '../assets/rightArrow.png';
 
 const Carousel = ({ pictures }) => {
+    // Gestion de l'index de l'image actuelle
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Création de la référence pour la "div" qui affiche le "backgroundImage"
     const backgroundImage = useRef();
 
+    // Mise à jour du "backgroundImage" quand currentIndex change
     useEffect(() => {
         if (backgroundImage.current) {
             backgroundImage.current.style.backgroundImage = `url(${pictures[currentIndex]})`;
@@ -26,40 +29,33 @@ const Carousel = ({ pictures }) => {
     };
 
     return (
-        <div className="carousel__container">
-            {pictures.length > 0 ? (
-                <img
-                    onClick={previous}
-                    className="carousel__prev"
-                    src={leftArrow}
-                    alt="previous"
-                    width="46.68"
-                    height="79.2"
-                />
+        <>
+            {pictures.length > 1 ? (
+                <div className="carousel__container">
+                    <img
+                        onClick={previous}
+                        className="carousel__prev"
+                        src={leftArrow}
+                        alt="previous"
+                    />
+                    <img
+                        onClick={next}
+                        className="carousel__next"
+                        src={rightArrow}
+                        alt="next"
+                    />
+                    <p className="carousel__counter">
+                        {currentIndex + 1 + '/' + pictures.length}
+                    </p>
+                    <div
+                        className="carousel__slide"
+                        ref={backgroundImage}
+                    ></div>
+                </div>
             ) : (
-                ''
+                <div className="carousel__slide" ref={backgroundImage}></div>
             )}
-            {pictures.length > 0 ? (
-                <img
-                    onClick={next}
-                    className="carousel__next"
-                    src={rightArrow}
-                    alt="next"
-                    width="46.68"
-                    height="79.2"
-                />
-            ) : (
-                ''
-            )}
-            {pictures.length > 0 ? (
-                <p className="carousel__counter">
-                    {currentIndex + 1 + '/' + pictures.length}
-                </p>
-            ) : (
-                ''
-            )}
-            <div className="carousel__slide" ref={backgroundImage}></div>
-        </div>
+        </>
     );
 };
 
