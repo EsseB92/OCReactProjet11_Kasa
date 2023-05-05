@@ -1,33 +1,23 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import NavigationLink from './NavigationLink';
 
 const Navigation = () => {
     return (
         <nav className="nav">
             <ul>
                 <li>
-                    <NavLink
-                        className={(nav) =>
-                            nav.isActive
-                                ? 'nav__link nav__link--active'
-                                : 'nav__link'
-                        }
+                    <NavigationLink
+                        className="nav__link"
                         to="/"
-                    >
-                        Accueil
-                    </NavLink>
+                        title="Accueil"
+                    />
                 </li>
                 <li>
-                    <NavLink
-                        className={(nav) =>
-                            nav.isActive
-                                ? 'nav__link nav__link--active'
-                                : 'nav__link'
-                        }
+                    <NavigationLink
+                        className="nav__link"
                         to="/about"
-                    >
-                        A propos
-                    </NavLink>
+                        title="À propos"
+                    />
                 </li>
             </ul>
         </nav>
